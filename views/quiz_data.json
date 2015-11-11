@@ -1,0 +1,57 @@
+[
+  {
+    "question" : "What was the first object-oriented programming language?",
+    "answers" : [
+      {"id": 0, "text": "Haskell"},
+      {"id": 1, "text": "Smalltalk-80"},
+      {"id": 2, "text": "Java"},
+      {"id": 3, "text": "C++"}
+    ],
+    "correct" : 1,
+    "feedback" : "Smalltalk-80 was the first object-oriented language."
+  },
+  	{
+		"question" : "What aspect of MVC deals with business logic?",
+		"answers"  : [
+			{"id"  : 0, "text" : "model" },
+			{"id"  : 1, "text" : "view" },
+			{"id"  : 2, "text" : "controller" },
+			{"id"  : 3, "text" : "viewmodel" }
+		],
+		"correct"  : 0,
+		"feedback" : "Models deal with business logic (creation/reading/updating/deletion)."
+	},
+	{
+		"question" : "What changes state depending on information retrieved?",
+		"answers"  : [
+			{"id"  : 0, "text" : "presentation"},
+			{"id"  : 1, "text" : "view"},
+			{"id"  : 2, "text" : "cascading style sheet"},
+			{"id"  : 3, "text" : "GUI"}
+		],
+		"correct"  : 1,
+		"feedback" : "A view changes state when its model changes."
+	},
+	{
+		"question" : "Which of these is not an example of an MVC framework?",
+		"answers"  : [
+			{"id"  : 0, "text" : "Rails"},
+			{"id"  : 1, "text" : "AngularJS"},
+			{"id"  : 2, "text" : "Django"},
+			{"id"  : 3, "text" : "PHP"}
+		],
+		"correct"  : 3,
+		"feedback" : "PHP is a scripting language that has various MVC frameworks."
+	},
+	{
+		"question" : "A ___________ handles user events.",
+		"answers"  : [
+			{"id"  : 0, "text" : "controller"},
+			{"id"  : 1, "text" : "scanner"},
+			{"id"  : 2, "text" : "watcher"},
+			{"id"  : 3, "text" : "GUI"}
+		],
+		"correct"  : 0,
+		"feedback" : "Controllers handle user interaction."
+	}
+]

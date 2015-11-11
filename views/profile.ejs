@@ -1,0 +1,15 @@
+    <div class="container">
+        <h1><%= user.displayName %><br/></h1>
+        <p>
+        Username: <%= user.username %><br/>
+        <% if (user.emails) { %>
+        Email: <%= user.emails[0].value %><br/>
+        <% } %>
+        ID: <%= user.id %><br/>
+        </p>
+        <a href="/logout">Log out</a>
+    </div>
+    <div class="alert alert-danger fade in">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      Data may not render in Angular yet, but I will fix it once I fully read though <a target="_blank" href="https://vickev.com/#!/article/authentication-in-single-page-applications-node-js-passportjs-angularjs">this post.</a> Sorry! (You can hit refresh to see the node rendered version, though.)
+    </div>

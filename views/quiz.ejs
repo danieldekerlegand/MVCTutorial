@@ -1,0 +1,43 @@
+		<link href="css/quiz.css" rel="stylesheet" type="text/css">
+		<div id="mvcQuiz" ng-controller="QuizCtrl">
+		  
+		  <h1><span>MVC Quiz</span></h1>
+		  <div class="progress">
+		    <div class="
+		        {{ ($index === currentQuestion) ? 'on' : 'off' }}
+		        {{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+		        {{ (myQuestion.isCorrect === true) ? true : false }}" 
+		        ng-repeat="myQuestion in thisQuiz"></div>
+		  </div>
+		  <div class="intro {{ (currentQuestion > -1) ? 'inactive' : 'active' }}">
+		    <h2>Hello</h2>
+		    <p>Try your hand at this MVC quiz.</p>
+		    <p class="btn btn-primary btn-lg" ng-click="currentQuestion = 0">Start</p>
+		  </div>
+		  <div class="question 
+		      {{ $index === currentQuestion ? 'active' : 'inactive' }} 
+		      {{ myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}" 
+		      ng-repeat="myQuestion in thisQuiz">
+		    <p class="txt">{{myQuestion.question}}</p>
+		    <p class="ans" 
+		      ng-class="{ 
+		          selected:isSelected($parent.$index,$index), 
+		          correct:isCorrect($parent.$index,$index) 
+		      }"
+		      ng-click="chooseAnswer($parent.$index,$index)" 
+		      ng-repeat="Answer in thisQuiz[$index].answers">
+		      {{Answer.text}}
+		    </p>
+		    <div class="feedback">
+		      <p ng-show="myQuestion.isCorrect === true">You are <strong>correct</strong>.</p>
+		      <p ng-show="myQuestion.isCorrect === false">Sorry... that is incorrect.</p>
+		      <p>{{myQuestion.feedback}}</p>
+		      <div class="btn btn-default btn-lg" ng-click="selectContinue()">Continue</div>
+		    </div>
+		  </div>
+		  <div class="results {{ (numQuestions === currentQuestion) ? 'active' : 'inactive' }}">
+		    <h3>Final Score</h3>
+		    <p>You got {{userScore}} / {{numQuestions}} questions right!</p>
+		  </div>
+		  
+		</div>

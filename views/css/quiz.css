@@ -1,0 +1,202 @@
+body { 
+  background-color: #fff; 
+  padding: 20px; 
+}
+
+#mvcQuiz {
+  font-family: 'Fjalla One', sans-serif; 
+  font-size: 16px; 
+  font-weight: 400;
+  width: 660px;
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #000 url(../img/database.svg) no-repeat 0px 0px;
+}
+
+#mvcQuiz h1 {
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0px;
+  position: absolute;
+  top: 25px;
+  left: 36px;
+}
+
+#mvcQuiz h1 span {
+  display: block;
+  font-weight: 900;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 3em;
+  line-height: 65px;
+}
+
+#mvcQuiz h2 {
+  font-size: 3em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#mvcQuiz h3 {
+  font-size: 2.5em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#mvcQuiz p {
+  margin: 0px 0px 14px 0px;
+}
+
+#mvcQuiz .progress {
+  width: 550px;
+  position: absolute;
+  top: 130px;
+  left: 40px;
+  background-color: rgb(255,255,255);
+}
+
+#mvcQuiz .progress div {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  margin-right: 0px;
+  background-color: #fff;
+  transition: background-color 1s;
+}
+
+#mvcQuiz .progress div::after {
+  display: block;
+  position: absolute;
+  width: 65px;
+  height: 40px;
+  transition: opacity 1s, top 1s;
+  background-color: red;
+}
+
+#mvcQuiz .progress div.on,
+#mvcQuiz .progress div.answered {
+  background-color: green;
+}
+
+#mvcQuiz .progress div.correct::after {
+  background-color: green;
+}
+
+#mvcQuiz .progress div.incorrect::after {
+  background-color: red;
+}
+/* Intro */
+#mvcQuiz .intro {
+  position: absolute;
+  top: 225px;
+  left: 30px;
+  width: 550px;
+}
+
+#mvcQuiz .intro p {
+  0px 0px 40px 0px;
+}
+
+
+#mvcQuiz .question {
+  width: 700px;
+  position: absolute;
+  top: 180px;
+  left: 30px;
+  z-index: -999;
+}
+
+#mvcQuiz .question .txt {
+  font-size: 1.6em;
+  margin: 0px 0px 20px 0px;
+}
+
+#mvcQuiz .question .ans {
+  display: inline-block;
+  font-size: 1.1em;
+  width: 500px;
+  border: 0px solid;
+  border-radius: 2px;
+  padding: 15px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+}
+
+#mvcQuiz .question .ans.selected {
+  border-color: #be4b16;
+}
+
+#mvcQuiz .question .ans.correct {
+  border-color: #459a2e;
+}
+
+#mvcQuiz .question .ans::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat 0px 0px;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 5px;
+  right:5px;
+}
+
+#mvcQuiz .question.unanswered .ans {
+  cursor: pointer;
+}
+
+#mvcQuiz .question.unanswered .ans:hover {
+  background-color: rgba(255,255,255,.8);
+}
+
+#mvcQuiz .question.answered .ans:hover {
+  cursor: default;
+}
+
+#mvcQuiz .feedback {
+  color: #efbe5e;
+  margin-top: 50px;
+  margin-right: 130px;
+  text-align: right;
+  transition: opacity 1.5s, margin-top 1.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#mvcQuiz .feedback .btn {
+  margin-top: 5px;
+}
+
+#mvcQuiz .feedback strong {
+  color: #fff;
+}
+
+#mvcQuiz .answered .feedback {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+#mvcQuiz .results {
+  position: absolute;
+  top: 225px;
+  left: 300px;
+  width: 550px;
+  z-index: -999;
+}
+
+#mvcQuiz .active, #mvcQuiz .inactive {
+  transition: z-index 1.5s ease-in-out;
+}
+
+#mvcQuiz .active {
+  z-index: 1;
+}
+
+#mvcQuiz .intro.inactive, #myQuiz.inactive.answered {
+  z-index: -999;
+}

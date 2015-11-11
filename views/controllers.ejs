@@ -1,0 +1,70 @@
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading"></div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1>Controllers</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            So, models take care of the hidden data in an application, and views 
+            output a nice presentation for users, but how does information get 
+            from a model to a view? In MVC, we need controllers to do the legwork 
+            of gathering data from models and determining which views to put it in. 
+            Controllers make decisions like setting a warning status to on, saving 
+            a user&#39;s overdue books into an array, or checking to see if a user&#39;s 
+            password is correct. You can think of them as the brain of an application. Now, 
+            let&#39;s put it all together, using our library database example:
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Controller</th>
+                  <th>View</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>username = bob1234<br><br>booksOverdue = true
+                      <br><br>booksCheckedOut = [A Wrinkle in Time, Twilight, 
+                      The Martian Chronicles, Beyond Good and Evil]
+                    </code>
+                  </td>
+                  <td>
+                    <code>bob1234 has overdue books, so set warning status to on 
+                      and save a list of his overdue books.<br><br>
+                      warning = on<br><br>
+                      overdueBooks = [A Wrinkle in Time, The Martian Chronicles]
+                    </code>
+                  </td>
+                  <td>
+                    <code>
+                      Since warning status is on, print out a red warning notice 
+                      and print out the names of bob1234&#39;s overdue books.<br><br>
+
+                    </code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <div class="col-sm-4">
+            <h4>What users might see:</h4>
+            <div class="alert alert-danger fade in">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Account notice for <em>username</em>!</strong> You have the following books overdue: <em>book1, book2...</em>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <ul class="pager">
+      <li class="previous"><a href="Tutorial/views">Previous</a></li>
+      <li class="next"><a href="Tutorial/application">Next</a></li>
+    </ul>
+  </div>

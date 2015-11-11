@@ -1,0 +1,27 @@
+	<div class="container">
+		<h1>Log In</h1>
+		<% if (message) { %>
+		<p><%= message %></p>
+		<% } %>
+		<form action="/login" method="post">
+			<div class="form-group">
+				<label>Username:</label>
+				<input type="text" name="username" class="form-control" /><br/>
+			</div>
+			<div class="form-group">
+				<label>Password:</label>
+				<input type="password" name="password" class="form-control" />
+			</div>
+			<div>
+				<input type="submit" value="Submit" class="btn btn-default" />
+			</div>
+		</form>
+	</div>
+	<div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    MongoDB not set up yet! Login with username "jack" and password "secret" to test authenticaiton.
+  </div>
+  <div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    Data may not render in Angular yet, but I will fix it once I fully read though <a target="_blank" href="https://vickev.com/#!/article/authentication-in-single-page-applications-node-js-passportjs-angularjs">this post.</a> Sorry! (You can hit refresh to see the node rendered version, though.)
+  </div>
